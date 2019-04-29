@@ -297,11 +297,16 @@ def login():
             time.sleep(2)
             exit()
 
-        elif chooseEntry == None:
+'''
+        elif chooseEntry == "":
             print("must choose a number") 
             login()
-            
 
+        elif type(chooseEntry) != int:
+            print("must choose a number shown!")
+            login()
+            
+'''
 
 def mainMenu():
     a = 0
