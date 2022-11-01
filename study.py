@@ -22,6 +22,7 @@ while i > 0:
 #  THIS WORKS!!!  
 # now just need to segway into the next question
 
-
+# add a list, use a function for as much as possible, to reuse
+# 
 
 
