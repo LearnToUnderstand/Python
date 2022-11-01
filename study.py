@@ -1,8 +1,5 @@
 
 
-# i can have a fill in the blank, remember to strip 
-# away the caps / add caps where needed, no matter how the input
-# is typed 
 
 import random
 
@@ -39,7 +36,6 @@ def Q1():
             lines(1)
             print('NOPE')
             lines(1)
-#Q1()
 
 def Q2():
     while i > 0:
@@ -52,7 +48,6 @@ def Q2():
         else:
             print('NOPE')
             lines(5)
-#Q2()
 
 def Q3():
     while i > 0:
@@ -67,8 +62,6 @@ def Q3():
         else: 
             print('NOPE')
             lines(5)
-
-#Q3()
 
 def Q4():
     lines(5)
@@ -92,14 +85,11 @@ def Q4():
             print('nope')
         elif ans == 'd':
             print('nope')
-#Q4()
 
 while i > 0:
     questions = [Q1, Q2, Q3, Q4]
     random.choice(questions)()
     
-
-# add a list, use a function for as much as possible, to reuse
 # use a separate file, with the questions? 
 #   if so, include spaces before and after, between questions.
 # include a choice to exit, about every 5 questions or so.
