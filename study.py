@@ -16,11 +16,11 @@ def spaces(x):
     return b
 
 lines(5)
-print('-----  NETWORK+ PRACTICE QUESTIONS  ------')
-print('|     Press Ctrl + c when finished       |')
-print('|     Press enter to continue            |')
-input('------------------------------------------ \n\n')
+print('     NETWORK+ PRACTICE QUESTIONS       ')
 time.sleep(2)
+lines(2)
+print('     Press Ctrl + c when finished       ')
+input('     Press enter to continue            ')
 
 # the questions, labeled as "Qx"
 i = 1  #for the while loops
@@ -151,8 +151,117 @@ def Q7():
         elif ans == 'a':
             print('nope')
 
+def Q8():
+    while i > 0:
+        print('''\n\n
+        What is the progressive loss of radio signal passing 
+        through different media called? ''')
+        print('''
+                A.  Attenuation 
+                B.  EAP
+                C.  RFI
+                D.  SNR ''')
+        ans = input('Enter a lower case letter only:    ')
+        if ans == 'a':
+            print('YEP')
+            break
+        elif ans == 'b':
+            print('nope')
+        elif ans == 'c':
+            print('nope')
+        elif ans == 'd':
+            print('nope')
+
+def Q9():
+    while i > 0:
+        print('''\n\n
+        Which technology enables use of a WAP without directly connecting the 
+        WAP to an AC power outlet?  ''')
+        print('''
+                A.  AES
+                B.  PoE
+                C.  Powered Wi-Fi
+                D.  TKIP  ''')
+        ans = input('Enter a lower case letter only:    ')
+        if ans == 'b':
+            print('''YEP!  
+                    Power over Ethernet enables a wireless 
+                    access point to use electricity from a PoE switch
+                    rather than connect to an AC power outlet direcctly.  ''')
+            break
+        elif ans == 'a':
+            print('nope')
+        elif ans == 'c':
+            print('nope')
+        elif ans == 'a':
+            print('nope')
+
+def Q10():
+    while i > 0:
+        print('''\n\n
+        To achieve maximum Wi-Fi coverage in a room, 
+        where should you place the WAP? ''')
+        print('''
+                A.  On the north side of the room
+                B.  In the center of the room
+                C.  Near a convenient electrical outlet
+                D.  It doesn't matter  ''')
+        ans = input('Enter a lower case letter only:    ')
+        if ans == 'b':
+            print('YEP')
+            break
+        elif ans == 'd':
+            print('nope')
+        elif ans == 'c':
+            print('nope')
+        elif ans == 'a':
+            print('nope')
+
+def Q11():
+    while i > 0:
+        print('''\n\n
+        Which of the following is the most secure method of 
+        wireless encryption?  ''')
+        print('''
+                A.  WEP
+                B.  WPA
+                C.  WPA2
+                D.  WPA3 ''')
+        ans = input('Enter a lower case letter only:    ')
+        if ans == 'd':
+            print('YEP')
+            break
+        elif ans == 'b':
+            print('nope')
+        elif ans == 'c':
+            print('nope')
+        elif ans == 'a':
+            print('nope')
+
+def Q12():
+    while i > 0:
+        print('''\n\n
+        what do you call a wireless network in infrasctructure mode 
+        with more than one access point?  ''')
+        print('''
+                A.  BSS
+                B.  EBSS
+                C.  WBSS
+                D.  ExNet  ''')
+        ans = input('Enter a lower case letter only:    ')
+        if ans == 'b':
+            print('YEP!  (Extended Basic Service Set)')
+            break
+        elif ans == 'd':
+            print('nope')
+        elif ans == 'c':
+            print('nope')
+        elif ans == 'a':
+            print('nope')
+
+
 while i > 0:
-    questions = [Q1, Q2, Q3, Q4, Q5, Q6, Q7]
+    questions = [Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8, Q9, Q10, Q11, Q12]
     random.choice(questions)()
     
 
@@ -160,5 +269,8 @@ while i > 0:
 # use a separate file, with the questions? 
 #   if so, include spaces before and after, between questions.
 # include a choice to exit, about every 5 questions or so.
+
+
+
 
 
