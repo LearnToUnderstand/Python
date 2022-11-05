@@ -1,6 +1,3 @@
-
-
-
 # STUDY.PY - practicing Python while studying Network+
 
 import random
@@ -26,8 +23,10 @@ i = 1  #for the while loops (for each question)
 a = 1  #increments to give the option to quit every 5 questions
 
 def Q1():
+    global a
     while i > 0:
-        print('\n\nHow fast of speed would you expect from cable internet? ')
+        lines(5)
+        print('How fast of speed would you expect from cable internet? ')
         print('Enter a number, in Mb:  \n')
         ans = input('   ')
         if ans == '15':
@@ -39,9 +38,11 @@ def Q1():
     a = a + 1  #keep this variable outside of the while loop
 
 def Q2():
+    global a
     while i > 0:
+        lines(5)
         print('\n\nHow many wire pairs does 1000BASE-T use?\n')
-        ans = input('Enter a number:    \n')
+        ans = input('Enter a number:    ')
         if ans =='4':
             print('\nYEP')
             break
@@ -50,9 +51,11 @@ def Q2():
     a = a + 1  #keep this variable outside of the while loop
 
 def Q3():
+    global a
     while i > 0:
-        print('\n\nWhat is the maximum cable length of 10GBASE-T on Cat6? ')
-        ans = input('Enter a number, in meters:  \n')
+        lines(5)
+        print('What is the maximum cable length of 10GBASE-T on Cat6? ')
+        ans = input('Enter a number, in meters:  ')
         if ans == '55':
             print('\nYEP')
             break
@@ -61,8 +64,10 @@ def Q3():
     a = a + 1  #keep this variable outside of the while loop
 
 def Q4():
+    global a
     while i > 0:
-        print('''\n\n
+        lines(5)
+        print('''
         Any encryption that uses the same key for 
         encryption ad decryption is called _________ . ''')
         print('''
@@ -83,8 +88,10 @@ def Q4():
     a = a + 1  #keep this variable outside of the while loop
 
 def Q5():
+    global a
     while i > 0:
-        print('''\n\n
+        lines(5)
+        print('''
         When should you use a cable tester to troubleshoot
         a network cable? ''')
         print('''
@@ -113,8 +120,9 @@ def Q5():
     a = a + 1  #keep this variable outside of the while loop
 
 def Q6():
+    global a
     while i > 0:
-        print('''\n\n
+        print('''
         What two devices together enable you to pick a 
         single cable out of a stack of cables? (Pick two, one at a time)''')
         print('''
@@ -137,8 +145,9 @@ def Q6():
     a = a + 1  #keep this variable outside of the while loop
 
 def Q7():
+    global a
     while i > 0:
-        print('''\n\n
+        print('''
         A newly installed host uses what NDP control message 
         type to find available routers on the network? ''')
         print('''
@@ -159,8 +168,9 @@ def Q7():
     a = a + 1  #keep this variable outside of the while loop
 
 def Q8():
+    global a
     while i > 0:
-        print('''\n\n
+        print('''
         What is the progressive loss of radio signal passing 
         through different media called? ''')
         print('''
@@ -181,6 +191,7 @@ def Q8():
     a = a + 1  #keep this variable outside of the while loop
 
 def Q9():
+    global a
     while i > 0:
         print('''\n\n
         Which technology enables use of a WAP without directly connecting the 
@@ -206,6 +217,7 @@ def Q9():
     a = a + 1  #keep this variable outside of the while loop
 
 def Q10():
+    global a
     while i > 0:
         print('''\n\n
         To achieve maximum Wi-Fi coverage in a room, 
@@ -228,6 +240,7 @@ def Q10():
     a = a + 1  #keep this variable outside of the while loop
 
 def Q11():
+    global a
     while i > 0:
         print('''\n\n
         Which of the following is the most secure method of 
@@ -250,6 +263,7 @@ def Q11():
     a = a + 1  #keep this variable outside of the while loop
 
 def Q12():
+    global a 
     while i > 0:
         print('''\n\n
         what do you call a wireless network in infrasctructure mode 
@@ -271,40 +285,19 @@ def Q12():
             print('nope')
     a = a + 1  #keep this variable outside of the while loop
 
-if a % 5 == 0:
-    print('Do you want to keep going?')
-    quit = input('Press y or n :     ')
-    if quit == 'n':
-        print('Good job deciding to study!')
-        time.sleep(2)
-        exit()
-    else: a = 1
-
-a = 1
 while i > 0:
     questions = [Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8, Q9, Q10, Q11, Q12]
     random.choice(questions)()
+    # THE OPTION TO QUIT EVERY 5 QUESTIONS IS NOT WORKING
+    if a % 5 == 0:
+        print('Do you want to keep going?')
+        quit = input('Press y or n :     ')
+        if quit == 'n':
+            print('Good job deciding to study!')
+            time.sleep(2)
+            exit()
+        else: a = 1
 
-
-
-# include a choice to exit, about every 5 questions or so.
-'''
-Need to prompt input every 5 quesions
-'do you want to quit' type of option
-
-will need to define and add an 'a' variable for each, 
-to increment one, once for every question asked
-
-if a % 5 == 0:
-    print('Do you want to keep going?')
-    quit = input('Press y or n :     ')
-    if quit == 'y':
-        print('Good job deciding to study!')
-        time.sleep(2)
-        exit()
-        
-
-'''
 
 
 
