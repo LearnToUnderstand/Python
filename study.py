@@ -35,7 +35,7 @@ def Q1():
             # can also use i = 0
         else:
             print('\nNOPE')
-    a = a + 1  #keep this variable outside of the while loop
+    a += 1  #keep this variable outside of the while loop
 
 def Q2():
     global a
@@ -48,7 +48,7 @@ def Q2():
             break
         else:
             print('\nNOPE')
-    a = a + 1  #keep this variable outside of the while loop
+    a += 1  #keep this variable outside of the while loop
 
 def Q3():
     global a
@@ -61,7 +61,7 @@ def Q3():
             break
         else: 
             print('\nNOPE')
-    a = a + 1  #keep this variable outside of the while loop
+    a += 1  #keep this variable outside of the while loop
 
 def Q4():
     global a
@@ -85,7 +85,7 @@ def Q4():
             print('\nnope')
         elif ans == 'd':
             print('\nnope')
-    a = a + 1  #keep this variable outside of the while loop
+    a += 1  #keep this variable outside of the while loop
 
 def Q5():
     global a
@@ -117,11 +117,12 @@ def Q5():
             print('\n nope \n')
         elif ans == 'd':
             print('\n nope \n')
-    a = a + 1  #keep this variable outside of the while loop
+    a += 1  #keep this variable outside of the while loop
 
 def Q6():
     global a
     while i > 0:
+        lines(5)
         print('''
         What two devices together enable you to pick a 
         single cable out of a stack of cables? (Pick two, one at a time)''')
@@ -142,11 +143,12 @@ def Q6():
                 print('\nNOPE')
         else:
             print('\nnope')
-    a = a + 1  #keep this variable outside of the while loop
+    a += 1  #keep this variable outside of the while loop
 
 def Q7():
     global a
     while i > 0:
+        lines(5)
         print('''
         A newly installed host uses what NDP control message 
         type to find available routers on the network? ''')
@@ -165,7 +167,7 @@ def Q7():
             print('nope')
         elif ans == 'a':
             print('nope')
-    a = a + 1  #keep this variable outside of the while loop
+    a += 1  #keep this variable outside of the while loop
 
 def Q8():
     global a
@@ -188,7 +190,7 @@ def Q8():
             print('nope')
         elif ans == 'd':
             print('nope')
-    a = a + 1  #keep this variable outside of the while loop
+    a += 1  #keep this variable outside of the while loop
 
 def Q9():
     global a
@@ -214,7 +216,7 @@ def Q9():
             print('nope')
         elif ans == 'a':
             print('nope')
-    a = a + 1  #keep this variable outside of the while loop
+    a += 1  #keep this variable outside of the while loop
 
 def Q10():
     global a
@@ -237,7 +239,7 @@ def Q10():
             print('nope')
         elif ans == 'a':
             print('nope')
-    a = a + 1  #keep this variable outside of the while loop
+    a += 1  #keep this variable outside of the while loop
 
 def Q11():
     global a
@@ -260,7 +262,7 @@ def Q11():
             print('nope')
         elif ans == 'a':
             print('nope')
-    a = a + 1  #keep this variable outside of the while loop
+    a += 1  #keep this variable outside of the while loop
 
 def Q12():
     global a 
@@ -283,22 +285,29 @@ def Q12():
             print('nope')
         elif ans == 'a':
             print('nope')
-    a = a + 1  #keep this variable outside of the while loop
+    a += 1  #keep this variable outside of the while loop
+
+def phrase():
+    phrases = [
+            'Good job deciding to study some more!',
+            'Keep at it!',
+            'Keep it up!',
+            'More studying = easier exam!',
+            'Nice work']
+    phrase = random.choice(phrases)
+    print(phrase)
 
 while i > 0:
     questions = [Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8, Q9, Q10, Q11, Q12]
     random.choice(questions)()
     # THE OPTION TO QUIT EVERY 5 QUESTIONS IS NOT WORKING
     if a % 5 == 0:
-        print('Do you want to keep going?')
-        quit = input('Press y or n :     ')
+        print('\nDo you want to keep going?')
+        quit = input('\nPress y or n :     ')
         if quit == 'n':
-            print('Good job deciding to study!')
+            lines(2)
+            phrase()
             time.sleep(2)
             exit()
         else: a = 1
-
-
-
-
 
