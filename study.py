@@ -1,29 +1,29 @@
+
+
+
 # STUDY.PY - practicing Python while studying Network+
-# i can have a fill in the blank, remember to strip 
-# away the caps / add caps where needed, no matter how the input
-# is typed 
 
 import random
 import time
 
-# creates blank lines, for easier reading
+# to create blank lines, for easier reading
+# wherever more space is needed between quesions, etc. 
 def lines(x):
-    a = print('\n  ' * x)
-    return a
+    print('\n  ' * x)
 
 def spaces(x):
-    b = print(' ' * x)
-    return b
+    print(' ' * x)
 
 lines(5)
 print('     NETWORK+ PRACTICE QUESTIONS       ')
-time.sleep(2)
+time.sleep(1)
 lines(2)
 print('     Press Ctrl + c when finished       ')
+time.sleep(1.)
 input('     Press enter to continue            ')
 
-# the questions, labeled as "Qx"
-i = 1  #for the while loops
+i = 1  #for the while loops (for each question)
+a = 1  #increments to give the option to quit every 5 questions
 
 def Q1():
     while i > 0:
@@ -31,11 +31,12 @@ def Q1():
         print('Enter a number, in Mb:  \n')
         ans = input('   ')
         if ans == '15':
-            print('\nEP')
+            print('\nYEP')
             break
             # can also use i = 0
         else:
             print('\nNOPE')
+    a = a + 1  #keep this variable outside of the while loop
 
 def Q2():
     while i > 0:
@@ -46,6 +47,7 @@ def Q2():
             break
         else:
             print('\nNOPE')
+    a = a + 1  #keep this variable outside of the while loop
 
 def Q3():
     while i > 0:
@@ -56,6 +58,7 @@ def Q3():
             break
         else: 
             print('\nNOPE')
+    a = a + 1  #keep this variable outside of the while loop
 
 def Q4():
     while i > 0:
@@ -77,6 +80,7 @@ def Q4():
             print('\nnope')
         elif ans == 'd':
             print('\nnope')
+    a = a + 1  #keep this variable outside of the while loop
 
 def Q5():
     while i > 0:
@@ -106,6 +110,7 @@ def Q5():
             print('\n nope \n')
         elif ans == 'd':
             print('\n nope \n')
+    a = a + 1  #keep this variable outside of the while loop
 
 def Q6():
     while i > 0:
@@ -129,6 +134,7 @@ def Q6():
                 print('\nNOPE')
         else:
             print('\nnope')
+    a = a + 1  #keep this variable outside of the while loop
 
 def Q7():
     while i > 0:
@@ -150,6 +156,7 @@ def Q7():
             print('nope')
         elif ans == 'a':
             print('nope')
+    a = a + 1  #keep this variable outside of the while loop
 
 def Q8():
     while i > 0:
@@ -171,6 +178,7 @@ def Q8():
             print('nope')
         elif ans == 'd':
             print('nope')
+    a = a + 1  #keep this variable outside of the while loop
 
 def Q9():
     while i > 0:
@@ -195,6 +203,7 @@ def Q9():
             print('nope')
         elif ans == 'a':
             print('nope')
+    a = a + 1  #keep this variable outside of the while loop
 
 def Q10():
     while i > 0:
@@ -216,6 +225,7 @@ def Q10():
             print('nope')
         elif ans == 'a':
             print('nope')
+    a = a + 1  #keep this variable outside of the while loop
 
 def Q11():
     while i > 0:
@@ -237,6 +247,7 @@ def Q11():
             print('nope')
         elif ans == 'a':
             print('nope')
+    a = a + 1  #keep this variable outside of the while loop
 
 def Q12():
     while i > 0:
@@ -258,18 +269,42 @@ def Q12():
             print('nope')
         elif ans == 'a':
             print('nope')
+    a = a + 1  #keep this variable outside of the while loop
 
+if a % 5 == 0:
+    print('Do you want to keep going?')
+    quit = input('Press y or n :     ')
+    if quit == 'n':
+        print('Good job deciding to study!')
+        time.sleep(2)
+        exit()
+    else: a = 1
 
+a = 1
 while i > 0:
     questions = [Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8, Q9, Q10, Q11, Q12]
     random.choice(questions)()
-    
 
-# add a list, use a function for as much as possible, to reuse
-# use a separate file, with the questions? 
-#   if so, include spaces before and after, between questions.
+
+
 # include a choice to exit, about every 5 questions or so.
+'''
+Need to prompt input every 5 quesions
+'do you want to quit' type of option
 
+will need to define and add an 'a' variable for each, 
+to increment one, once for every question asked
+
+if a % 5 == 0:
+    print('Do you want to keep going?')
+    quit = input('Press y or n :     ')
+    if quit == 'y':
+        print('Good job deciding to study!')
+        time.sleep(2)
+        exit()
+        
+
+'''
 
 
 
